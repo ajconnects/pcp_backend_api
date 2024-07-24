@@ -60,13 +60,13 @@ MIDDLEWARE = [
 
 AUTH_USER_MODEL = 'api.User'
 
-CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 #this allow the cross-origin request to the react app
-#CORS_ALLOWED_ORIGINS = [
-#    "http://localhost:3000",
-#]
+CORS_ALLOWED_ORIGINS = [
+   "https://pcpconsultant.netlify.app",
+]
 
 
 ROOT_URLCONF = 'backend.urls'

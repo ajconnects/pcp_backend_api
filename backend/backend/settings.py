@@ -47,15 +47,16 @@ INSTALLED_APPS = [
     'messaging',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 AUTH_USER_MODEL = 'api.User'
@@ -73,7 +74,6 @@ CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization',
     'Access-Control-Allow-Origin',
-    ...
 ]
 
 CORS_ALLOW_METHODS = [

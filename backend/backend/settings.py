@@ -68,6 +68,22 @@ CORS_ALLOWED_ORIGINS = [
    "https://pcpconsultant.netlify.app",
 ]
 
+# To allow specific headers and methods
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'Access-Control-Allow-Origin',
+    ...
+]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
 
 ROOT_URLCONF = 'backend.urls'
 

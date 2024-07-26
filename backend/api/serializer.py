@@ -68,6 +68,13 @@ class ProgrammerSerializer(serializers.ModelSerializer):
 
         return instance
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category_id = self.request.query_params.get('category')
+        if category_id:
+            queryset = queryset.filter(categories__id=category_id)
+        return queryset
+
 class ClientSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     profile_picture = serializers.ImageField(max_length=None, use_url=True, required=False)
